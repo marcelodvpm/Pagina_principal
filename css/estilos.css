@@ -1,0 +1,238 @@
+/* ===== RESET Y VARIABLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fondo: #FAFAFA;
+    --blanco: #FFFFFF;
+    --texto: #1A1A1A;
+    --texto-claro: #4A4A4A;
+    --gris-borde: #E8E8E8;
+    --acento: #2563EB;
+    --acento-hover: #1D4ED8;
+    --sombra: 0 4px 12px rgba(0,0,0,0.06);
+    --sombra-hover: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: var(--blanco);
+    border-bottom: 1px solid var(--gris-borde);
+    padding: 48px 0 32px;
+    margin-bottom: 8px;
+}
+
+.header-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.header-info h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.subtitulo {
+    font-size: 1.1rem;
+    color: var(--texto-claro);
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.bio {
+    color: var(--texto-claro);
+    font-size: 0.95rem;
+    margin-top: 6px;
+    max-width: 400px;
+}
+
+.header-social {
+    display: flex;
+    gap: 16px;
+}
+
+.social-link {
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.social-link:hover {
+    color: var(--acento);
+}
+
+/* ===== CATEGORÍAS ===== */
+.categoria {
+    margin: 48px 0;
+}
+
+.categoria h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--gris-borde);
+    padding-bottom: 8px;
+}
+
+/* ===== GRID DE REPOS ===== */
+.grid-repos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.repo-card {
+    background: var(--blanco);
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid var(--gris-borde);
+    text-decoration: none;
+    color: var(--texto);
+    transition: all 0.25s ease;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+}
+
+.repo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-hover);
+    border-color: var(--acento);
+}
+
+.repo-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    margin-bottom: 6px;
+    color: var(--texto);
+}
+
+.repo-card p {
+    font-size: 0.92rem;
+    color: var(--texto-claro);
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+}
+
+.tag {
+    background: var(--fondo);
+    padding: 2px 12px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--texto-claro);
+    border: 1px solid var(--gris-borde);
+}
+
+/* ===== ESTADÍSTICAS ===== */
+.stats {
+    margin-top: 56px;
+    margin-bottom: 56px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    background: var(--blanco);
+    padding: 32px 24px;
+    border-radius: 16px;
+    border: 1px solid var(--gris-borde);
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--acento);
+    letter-spacing: -0.5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--texto-claro);
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: var(--blanco);
+    border-top: 1px solid var(--gris-borde);
+    padding: 24px 0;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--texto-claro);
+}
+
+footer a {
+    color: var(--acento);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+    .header-grid {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-social {
+        margin-top: 8px;
+        flex-wrap: wrap;
+    }
+
+    .grid-repos {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 24px 12px;
+    }
+
+    .stat-num {
+        font-size: 1.8rem;
+    }
+}
