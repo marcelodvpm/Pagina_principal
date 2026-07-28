@@ -6,8 +6,8 @@
 }
 
 :root {
-    --fondo: #FAFAFA;
-    --blanco: #FFFFFF;
+    --fondo: #9bd0ef;
+    --blanco: #e5efef;
     --texto: #1A1A1A;
     --texto-claro: #4A4A4A;
     --gris-borde: #E8E8E8;
@@ -235,4 +235,65 @@ footer a:hover {
     .stat-num {
         font-size: 1.8rem;
     }
+}
+/* ===== HEADER HORIZONTAL ===== */
+.header-fila {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gris-borde);
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+.header-nombre h1 {
+    margin-bottom: 2px;
+}
+
+.header-nombre .subtitulo {
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.header-nombre .bio {
+    margin-top: 2px;
+    font-size: 0.9rem;
+    max-width: 100%;
+}
+/* ===== HEADER HORIZONTAL ===== */
+.header-fila {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--gris-borde);
+    flex-shrink: 0; /* Evita que la imagen se encoja */
+}
+
+.header-nombre h1 {
+    margin-bottom: 4px;
+    font-size: 2.2rem;
+}
+
+.header-nombre .subtitulo {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.header-nombre .bio {
+    margin-top: 4px;
+    font-size: 1rem;
+    max-width: 100%;
 }
